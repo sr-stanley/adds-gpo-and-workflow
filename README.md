@@ -22,7 +22,7 @@ This tutorial covers configuring **Group Policy** and praciticg basic workflows 
 Open and log in to Azure: [https://azure.microsoft.com/](https://azure.microsoft.com/)
 
 ## Table of Contents
-- [Configure Account Lockouts in Group Policy Management](#step-1---configure-account-lockouts-in-group-policy-management)
+- [Step 1 - Configure Account Lockouts in Group Policy Management](#step-1---configure-account-lockouts-in-group-policy-management)
 - [Step 2 - Force Update for Group Policy on Client VM](#step-2---force-update-for-group-policy-on-client-vm)
 - [Step 3 - Dealing With Account Lockouts](#step-3---dealing-with-account-lockouts)
 - [Step 4 - Disable Accounts within Active Directory](#step-4---disable-accounts-within-active-directory)
