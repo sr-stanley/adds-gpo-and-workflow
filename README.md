@@ -67,7 +67,7 @@ First, logon to Client VM using the Admin user account.
 
 ---
 
-Step 3 - Dealing With Account Lockouts
+### Step 3 - Dealing With Account Lockouts
 (common it support)
 
 Next, lets attempt to logon to the Client VM using one of the Employee User accounts you just created but used the **wrong** password 5+ times to simulate an account lockout.
@@ -88,7 +88,7 @@ Select the user with the account lockout and click the `Account` tab and view th
 
 ---
 
-Step 4 - Disable Accounts within Active Directory
+### Step 4 - Disable Accounts within Active Directory
 
 Choose one of the employee users you created and disable their account. It can be the same one you just used for the password lockout or another user.
 
