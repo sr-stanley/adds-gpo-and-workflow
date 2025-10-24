@@ -4,12 +4,14 @@
 
 <h1>Configure Group Policy and Practicing Workflows Inside Active Directory</h1>
 
-This tutorial covers configuring **Group Policy** and praciticg basic workflows within AD DS.
+This tutorial covers configuring **Group Policy** and practicing basic workflows within AD DS.
 
-<h2>Environments and Technologies Used</h2>
+<h2>Environments, Technologies and Tools Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
+- Active Directory Domain Services
+- Group Policy Management
 - Command Prompt
 
 <h2>Operating Systems Used </h2>
@@ -31,8 +33,7 @@ Open and log in to Azure: [https://azure.microsoft.com/](https://azure.microsoft
 ---
 
 ### Step 1 - Configure Account Lockouts in Group Policy Management
-(gpo is..)
-
+**Group Policy** in Active Directory is a management feature that allows administrators to configure and enforce settings for users and computers across a Windows domain. Basically, it defines what users can do and how computers behave, all from a single management console without needing to configure each system individually.
 
 First, logon to DC-1 using your Admin User account.
 
@@ -69,9 +70,18 @@ First, logon to Client VM using the Admin user account.
 ---
 
 ### Step 3 - Dealing With Account Lockouts
-(common it support)
+Knowing how to unlock accounts is one of the most common and valuable skills for anyone managing or supporting an AD DS environment.
 
-Next, lets attempt to logon to the Client VM using one of the Employee User accounts you just created but used the **wrong** password 5+ times to simulate an account lockout.
+Account lockouts can be caused by many different sources:
+- A user typing the wrong password.
+- Saved credentials in Windows Credential Manager.
+- A mapped network drive using old credentials.
+- Outlook, OneDrive, VPN clients, or mobile devices still using expired passwords.
+- Services or scheduled tasks running under old credentials.
+
+**Knowing how to isolate which device or service is triggering the lockout teaches troubleshooting and pattern recognition.**
+
+First, lets attempt to logon to the Client VM using one of the Employee User accounts you just created but use the **wrong** password 5+ times to simulate an account lockout.
 
 <img width="557" height="491" alt="3 9 locked out" src="https://github.com/user-attachments/assets/0e80dd39-7739-4844-84f8-7341a54f3356" />
 <br><br>
@@ -90,6 +100,14 @@ Select the user with the account lockout and click the `Account` tab and view th
 ---
 
 ### Step 4 - Disable Accounts within Active Directory
+Knowing how and when to disable user accounts in Active Directory Domain Services (AD DS) is important for security, access control, and lifecycle management within an organization’s domain environment.
+
+When an employee leaves the company, is terminated, or goes on extended leave, their AD account must be disabled immediately to prevent:
+- Unauthorized logins.
+- Access to company files, emails, and systems.
+- Insider threats or accidental data exposure.
+
+**Disabling the account stops access across the domain but preserves account data, which is important for audits or reactivation later.**
 
 Choose one of the employee users you created and disable their account. It can be the same one you just used for the password lockout or another user.
 
